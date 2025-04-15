@@ -1,10 +1,16 @@
 
 body {
+    background-color: #000;
+    color: #FFD700;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
-    background: #f4f4f4;
+    direction: rtl;
 }
-h1 {
-    color: #333;
+header {
+    padding: 20px;
+}
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 10px;
 }
