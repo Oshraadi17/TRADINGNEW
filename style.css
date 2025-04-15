@@ -5,16 +5,18 @@ body {
   background: linear-gradient(135deg, #f5f9ff, #e1ecf7);
   color: #0D1B2A;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   text-align: center;
+  position: relative;
 }
 
 .hero {
+  margin-top: 100px;
   max-width: 600px;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
@@ -33,4 +35,55 @@ body {
 
 .cta-button:hover {
   background-color: #0099dd;
+}
+
+#ai-button {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#chat-box {
+  position: fixed;
+  bottom: 80px;
+  left: 30px;
+  width: 300px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#chat-header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+#chat-content {
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 14px;
+}
+
+#user-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
 }
