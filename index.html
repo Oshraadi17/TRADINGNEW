@@ -3,25 +3,20 @@
 <html lang="he">
 <head>
   <meta charset="UTF-8" />
+  <title>Trading Buy - דף פתיחה</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trading Buy - דף הבית</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="hero">
-    <h1>הגבול בין שיגעון לגאונות – מתחיל כאן</h1>
-    <p>Trading Buy – המערכת החכמה למסחר בזמן אמת</p>
-    <a href="graph.html" class="cta-button">מתחילים</a>
+  <div class="overlay">
+    <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
+    <a href="home.html" class="start-btn">מתחילים</a>
+    <button id="mute-btn">🔊</button>
   </div>
-
-  <button id="ai-button">שוחח עם המנטור</button>
-  <div id="chat-box" class="hidden">
-    <div id="chat-header">👤 המנטור שלך למסחר</div>
-    <div id="chat-content">
-      <p><strong>מנטור:</strong> שלום! איך אפשר לעזור לך במסחר היום?</p>
-    </div>
-    <input type="text" id="user-input" placeholder="כתוב כאן שאלה..." />
-  </div>
+  <audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    הדפדפן שלך לא תומך בהשמעת מוזיקה.
+  </audio>
+  <script src="script.js"></script>
 </body>
 </html>
