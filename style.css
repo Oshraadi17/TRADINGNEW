@@ -5,22 +5,27 @@ body {
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-}
-
-.overlay {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 40px;
-  border-radius: 20px;
+  overflow: hidden;
   color: white;
 }
 
+.logo {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 25vh;
+  opacity: 1;
+  animation: fadeOut 2.5s ease-out forwards;
+}
+
+.launch {
+  display: none;
+  text-align: center;
+  margin-top: 25vh;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 20px;
 }
 
@@ -28,9 +33,10 @@ h1 {
   padding: 15px 30px;
   background-color: #00B2FF;
   color: white;
-  text-decoration: none;
   font-size: 18px;
-  border-radius: 30px;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
   transition: background 0.3s;
 }
 
@@ -39,12 +45,24 @@ h1 {
 }
 
 #mute-btn {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   left: 20px;
   background: none;
   border: none;
-  font-size: 20px;
-  cursor: pointer;
+  font-size: 22px;
   color: white;
+  cursor: pointer;
+}
+
+.powered {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  90% {opacity: 0;}
+  100% {opacity: 0; display: none;}
 }
