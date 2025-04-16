@@ -5,20 +5,16 @@
   <meta charset="UTF-8" />
   <title>Trading Buy</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <canvas id="background"></canvas>
-  <div class="overlay">
+  <div class="container">
     <img src="logo.png" alt="Trading Buy" class="logo" />
     <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
+    <canvas id="liveChart"></canvas>
     <button onclick="start()">מתחילים</button>
     <p class="credit">Powered by AI – Trading Buy</p>
-    <audio autoplay loop id="bg-music">
-      <source src="music.mp3" type="audio/mpeg" />
-    </audio>
-    <button id="mute-btn">🔊</button>
   </div>
   <script src="script.js"></script>
-  <script src="graph.js"></script>
 </body>
 </html>
