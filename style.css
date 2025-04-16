@@ -1,71 +1,30 @@
 
-body, html {
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    background: linear-gradient(to bottom right, #001F3F, #0074D9);
+    height: 100vh;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a1a);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
 }
-
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
 .overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    text-align: center;
+    color: white;
 }
-
-.logo {
-    font-size: 36px;
-    font-weight: bold;
-    color: #00ffff;
-}
-
-.headline {
-    font-size: 28px;
-    margin: 0;
-}
-
-.start-btn {
-    padding: 15px 40px;
+button {
+    margin-top: 20px;
+    padding: 10px 30px;
     font-size: 18px;
-    background-color: #00B2FF;
     border: none;
-    border-radius: 50px;
+    background: #00BFFF;
     color: white;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
-.start-btn:hover {
-    background-color: #008ecc;
-}
-
-.powered {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
-}
-
-#mute-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+.credit {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.7;
 }

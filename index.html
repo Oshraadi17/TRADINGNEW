@@ -3,20 +3,23 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Trading Buy - פתיחה</title>
+    <title>Trading Buy - דף פתיחה</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="overlay">
-        <div class="logo">Trading Buy</div>
-        <h1 class="headline">הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
-        <button class="start-btn" onclick="goHome()">מתחילים</button>
-        <p class="powered">Powered by AI – Trading Buy</p>
-        <audio autoplay loop id="bg-music">
-            <source src="music.mp3" type="audio/mpeg">
+        <h1>Trading Buy</h1>
+        <p class="slogan">הגבול בין שיגעון לגאונות — מתחיל כאן</p>
+        <button onclick="start()">מתחילים</button>
+        <p class="credit">Powered by AI – Trading Buy</p>
+        <audio autoplay loop>
+            <source src="background.mp3" type="audio/mpeg">
         </audio>
-        <button id="mute-btn">🔊</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function start() {
+            window.location.href = "home.html";
+        }
+    </script>
 </body>
 </html>
