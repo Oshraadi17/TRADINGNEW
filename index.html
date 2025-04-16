@@ -1,26 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
-  <meta charset="UTF-8" />
-  <title>Trading Buy</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Trading Buy+</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="logo-container">
-      <svg viewBox="0 0 200 60" class="logo-svg">
-        <text x="0" y="45" font-size="40" fill="#2575fc" font-family="Arial, sans-serif">Trading Buy</text>
-      </svg>
+    <div class="container">
+        <div class="logo">Trading Buy+</div>
+        <h1 class="headline">הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
+        <button class="start-btn">מתחילים</button>
+        <p class="powered">Powered by AI – Trading Buy</p>
     </div>
-    <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
-    <button onclick="start()">מתחילים</button>
-    <p class="credit">Powered by AI – Trading Buy</p>
-  </div>
-  <script>
-    function start() {
-      window.location.href = "home.html";
-    }
-  </script>
+    <canvas id="graphCanvas"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>
