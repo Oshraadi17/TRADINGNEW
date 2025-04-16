@@ -1,68 +1,27 @@
 
-body {
-  margin: 0;
-  padding: 0;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  color: white;
-}
-
-.logo {
-  font-size: 36px;
-  text-align: center;
-  margin-top: 25vh;
-  opacity: 1;
-  animation: fadeOut 2.5s ease-out forwards;
-}
-
-.launch {
-  display: none;
-  text-align: center;
-  margin-top: 25vh;
-}
-
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 20px;
-}
-
-.start-btn {
-  padding: 15px 30px;
-  background-color: #00B2FF;
-  color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 40px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.start-btn:hover {
-  background-color: #008ecc;
-}
-
-#mute-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  color: white;
-  cursor: pointer;
-}
-
-.powered {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #cccccc;
-}
-
-@keyframes fadeOut {
-  0% {opacity: 1;}
-  90% {opacity: 0;}
-  100% {opacity: 0; display: none;}
-}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        text-align: center;
+    }
+    .container {
+        margin-top: 20vh;
+    }
+    .logo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: #00AEEF;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+    
