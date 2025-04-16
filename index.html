@@ -1,20 +1,61 @@
 
-    <!DOCTYPE html>
-    <html lang="he">
-    <head>
-        <meta charset="UTF-8">
-        <title>Trading Buy</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <img src="logo.png" alt="Trading Buy Logo" class="logo">
-            <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
-            <button onclick="start()">מתחילים</button>
-            <audio autoplay loop>
-                <source src="music.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </body>
-    </html>
-    
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Trading Buy - פתיחה</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <img src="logo.png" alt="Trading Buy Logo" class="logo">
+        <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
+        <button onclick="startApp()">מתחילים</button>
+        <audio autoplay loop>
+            <source src="intro.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        function startApp() {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>
