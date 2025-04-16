@@ -5,16 +5,22 @@
   <meta charset="UTF-8" />
   <title>Trading Buy</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="Trading Buy" class="logo" />
+  <div class="wrapper">
+    <div class="logo-container">
+      <svg viewBox="0 0 200 60" class="logo-svg">
+        <text x="0" y="45" font-size="40" fill="#2575fc" font-family="Arial, sans-serif">Trading Buy</text>
+      </svg>
+    </div>
     <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
-    <canvas id="liveChart"></canvas>
     <button onclick="start()">מתחילים</button>
     <p class="credit">Powered by AI – Trading Buy</p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    function start() {
+      window.location.href = "home.html";
+    }
+  </script>
 </body>
 </html>

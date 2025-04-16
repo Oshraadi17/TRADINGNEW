@@ -3,32 +3,31 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #f2f4f7, #e0ecf7);
+  background: linear-gradient(135deg, #e1ecf7, #f8faff);
   height: 100vh;
-  overflow: hidden;
-}
-
-.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 40px;
 }
 
-.logo {
-  width: 120px;
+.wrapper {
+  max-width: 90%;
+}
+
+.logo-container {
   margin-bottom: 20px;
+}
+
+.logo-svg {
+  width: 200px;
+  height: 60px;
 }
 
 h1 {
   font-size: 24px;
   color: #222;
   margin-bottom: 30px;
-}
-
-canvas {
-  width: 80%;
-  max-width: 700px;
-  height: 200px;
-  margin-bottom: 40px;
 }
 
 button {
