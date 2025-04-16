@@ -3,10 +3,10 @@ const music = document.getElementById("bg-music");
 const muteBtn = document.getElementById("mute-btn");
 
 muteBtn.addEventListener("click", () => {
-    music.muted = !music.muted;
-    muteBtn.textContent = music.muted ? "🔇" : "🔊";
+  music.muted = !music.muted;
+  muteBtn.textContent = music.muted ? "🔇" : "🔊";
 });
 
-function goHome() {
-    window.location.href = "home.html";
+function start() {
+  window.location.href = "home.html";
 }
