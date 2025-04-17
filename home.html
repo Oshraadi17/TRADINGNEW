@@ -1,8 +1,182 @@
 
 <!DOCTYPE html>
 <html lang="he">
-<head><meta charset="UTF-8"><title>Trading Buy - דף הבית</title></head>
-<body style="text-align:center;padding-top:40px;font-family:sans-serif;">
-<h1>ברוך הבא לדף הבית של Trading Buy</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="he, en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRADING BUY+</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Assistant', sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+    header {
+      background: #121212;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #4A90E2, #6A5ACD);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4A90E2;
+    }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .language-switch button {
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 12px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .hero {
+      height: 85vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('background.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1, .hero p, .hero button, footer {
+      display: none;
+    }
+    .features {
+      display: none;
+    }
+    .features.active, .hero h1.active, .hero p.active, .hero button.active, footer.active {
+      display: block;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #111;
+      text-align: center;
+    }
+    .features h2 {
+      grid-column: 1/-1;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-family: 'Orbitron', sans-serif;
+      color: #4A90E2;
+    }
+    .feature {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #6A5ACD;
+    }
+    .feature p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #0b0b0b;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switch">
+    <button onclick="setLanguage('he')">עברית</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+
+  <header>
+    <div class="logo">TRADING BUY+</div>
+    <nav>
+      <a href="#">בית</a>
+      <a href="#features">תכונות</a>
+      <a href="#ai">AI</a>
+      <a href="#community">קהילה</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="lang lang-he active">TRADING BUY+</h1>
+    <h1 class="lang lang-en">TRADING BUY+</h1>
+    <p class="lang lang-he active">פלטפורמת מסחר חדשנית המשלבת בינה מלאכותית, גרפים חכמים, וקהילה תומכת בזמן אמת.</p>
+    <p class="lang lang-en">An innovative trading platform combining AI, smart charts, and a real-time trader community.</p>
+    <button class="btn lang lang-he active" onclick="alert('המסחר שלך מתחיל כאן')">התחל מסחר</button>
+    <button class="btn lang lang-en" onclick="alert('Your trading journey starts here')">Start Trading</button>
+  </section>
+
+  <section class="features active" id="features">
+    <h2 class="lang lang-he active">תכונות מרכזיות</h2>
+    <h2 class="lang lang-en">Key Features</h2>
+    <div class="feature">
+      <h3>📊 גרפים חכמים / Smart Charts</h3>
+      <p class="lang lang-he active">כלי ניתוח מתקדמים, רמות ICT, סמנים בזמן אמת וגרפים חיים בהתאמה אישית.</p>
+      <p class="lang lang-en">Advanced analysis tools, ICT levels, real-time signals, and personalized live charts.</p>
+    </div>
+    <div class="feature">
+      <h3>🤖 AI מסחרי / Trading AI</h3>
+      <p class="lang lang-he active">בינה מלאכותית מלווה אותך במסחר, מזהה דפוסים ומספקת המלצות חכמות.</p>
+      <p class="lang lang-en">AI assists your trades, detects patterns, and gives smart recommendations.</p>
+    </div>
+    <div class="feature">
+      <h3>📘 יומן רגשי / Emotion Journal</h3>
+      <p class="lang lang-he active">תיעוד תחושות, תגובות בזמן אמת, וסיכום יומי אוטומטי ללמידה עצמית.</p>
+      <p class="lang lang-en">Track emotions, log reactions in real time, and get automatic daily summaries.</p>
+    </div>
+    <div class="feature">
+      <h3>🌐 קהילה חיה / Live Community</h3>
+      <p class="lang lang-he active">סוחרים משתפים, מגיבים, לומדים ומתקדמים יחד בסביבה חכמה.</p>
+      <p class="lang lang-en">Traders share, respond, learn, and grow together in a smart environment.</p>
+    </div>
+  </section>
+
+  <footer class="lang lang-he active">
+    &copy; 2025 TRADING BUY+. כל הזכויות שמורות.
+  </footer>
+  <footer class="lang lang-en">
+    &copy; 2025 TRADING BUY+. All rights reserved.
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
+      localStorage.setItem('lang', lang);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || (navigator.language.startsWith('en') ? 'en' : 'he');
+      setLanguage(lang);
+    });
+  </script>
 </body>
 </html>
