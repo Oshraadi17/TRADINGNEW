@@ -25,10 +25,6 @@
       background-color: #0d0d0d;
     }
 
-    body {
-      overflow: hidden;
-    }
-
     .hero {
       background-image: url('background.jpg');
       background-size: cover;
@@ -57,10 +53,6 @@
       padding: 20px;
     }
 
-    h1 span, p span, .btn span, footer span {
-      display: none;
-    }
-
     h1, p, .btn, footer {
       font-size: 1.6rem;
     }
@@ -76,6 +68,7 @@
       box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
       font-family: var(--font-en);
       margin-top: 20px;
+      color: white;
     }
 
     .btn:hover {
@@ -109,6 +102,14 @@
       font-size: 0.9rem;
       z-index: 2;
     }
+
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: inline;
+    }
   </style>
 </head>
 <body>
@@ -120,35 +121,34 @@
     </div>
     <div class="content">
       <h1>
-        <span lang="he">TRADING BUY+</span>
-        <span lang="en">TRADING BUY+</span>
+        <span class="lang lang-he active">TRADING BUY+</span>
+        <span class="lang lang-en">TRADING BUY+</span>
       </h1>
       <p>
-        <span lang="he">הגבול בין שיגעון לגאונות — מתחיל כאן</span>
-        <span lang="en">The line between madness and genius — begins here</span>
+        <span class="lang lang-he active">הגבול בין שיגעון לגאונות — מתחיל כאן</span>
+        <span class="lang lang-en">The line between madness and genius — begins here</span>
       </p>
       <button class="btn" onclick="window.location.href='home.html'">
-        <span lang="he">מתחילים</span>
-        <span lang="en">Get Started</span>
+        <span class="lang lang-he active">מתחילים</span>
+        <span class="lang lang-en">Get Started</span>
       </button>
     </div>
     <footer>
-      <span lang="he">תנאי שימוש | מדיניות פרטיות</span>
-      <span lang="en">Terms of Service | Privacy Policy</span>
+      <span class="lang lang-he active">תנאי שימוש | מדיניות פרטיות</span>
+      <span class="lang lang-en">Terms of Service | Privacy Policy</span>
     </footer>
   </div>
 
   <script>
     function setLanguage(lang) {
-      document.querySelectorAll('[lang]').forEach(el => {
-        el.style.display = (el.getAttribute('lang') === lang) ? '' : 'none';
-      });
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
       localStorage.setItem('lang', lang);
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('lang') || (navigator.language.startsWith('en') ? 'en' : 'he');
-      setLanguage(savedLang);
+      const lang = localStorage.getItem('lang') || (navigator.language.startsWith('en') ? 'en' : 'he');
+      setLanguage(lang);
     });
   </script>
 </body>
