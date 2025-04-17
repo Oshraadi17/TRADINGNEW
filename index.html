@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="Content-Language" content="he, en">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRADING BUY+</title>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
@@ -13,29 +13,40 @@
       --font-english: 'Orbitron', sans-serif;
     }
 
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
       height: 100%;
+      overflow: hidden;
       font-family: var(--font-hebrew);
       background-color: #0d0d0d;
     }
 
-    [lang='en'] body {
-      direction: ltr;
-      font-family: var(--font-english);
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
     }
 
-    [lang='he'] body {
-      direction: rtl;
-      font-family: var(--font-hebrew);
+    .loader h1 {
+      color: #00BFFF;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
     }
 
     .hero {
+      display: none;
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
@@ -51,34 +62,47 @@
 
     .overlay {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      top: 0; right: 0; bottom: 0; left: 0;
       background: linear-gradient(to bottom right, rgba(20,20,40,0.6), rgba(0,0,0,0.75));
+      z-index: 1;
     }
 
     .content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 90%;
       padding: 20px;
     }
 
     h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      font-size: 3rem;
       color: #00BFFF;
       font-family: 'Orbitron', sans-serif;
       text-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
     }
 
-    p {
-      font-size: 1.6rem;
-      margin-bottom: 2rem;
+    #tagline {
+      font-size: 1.5rem;
+      margin: 20px 0;
       color: #C0C0C0;
-      text-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: opacity 0.5s ease;
+    }
+
+    .slider {
+      margin: 20px auto;
+      width: 80%;
+      color: #A9A9A9;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .slider span {
+      background: rgba(255,255,255,0.08);
+      padding: 8px 16px;
+      border-radius: 20px;
     }
 
     .btn {
@@ -99,6 +123,23 @@
       box-shadow: 0 6px 25px rgba(106, 90, 205, 0.6);
     }
 
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
+    }
+
+    .language-switch button {
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 12px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
     footer {
       position: absolute;
       bottom: 20px;
@@ -109,35 +150,71 @@
       z-index: 1;
     }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const lang = navigator.language || navigator.userLanguage;
-      if (lang.startsWith('en')) {
-        document.documentElement.lang = 'en';
-        document.body.innerHTML = `
-          <div class="hero">
-            <div class="overlay"></div>
-            <div class="content">
-              <h1>TRADING BUY+</h1>
-              <p>The line between madness and genius — begins here</p>
-              <button class="btn" onclick="window.location.href='home.html'">Get Started</button>
-            </div>
-            <footer>Terms of Service | Privacy Policy</footer>
-          </div>
-        `;
-      }
-    });
-  </script>
 </head>
 <body>
-  <div class="hero">
+  <div class="loader" id="loader">
+    <h1>TRADING BUY+</h1>
+  </div>
+
+  <div class="hero" id="hero">
     <div class="overlay"></div>
+    <div class="language-switch">
+      <button onclick="setLanguage('he')">עברית</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
     <div class="content">
       <h1>TRADING BUY+</h1>
-      <p>הגבול בין שיגעון לגאונות — מתחיל כאן</p>
-      <button class="btn" onclick="window.location.href='home.html'">מתחילים</button>
+      <p id="tagline">הגבול בין שיגעון לגאונות — מתחיל כאן</p>
+      <div class="slider">
+        <span>AI בזמן אמת</span>
+        <span>גרפים חכמים</span>
+        <span>יומן רגשי</span>
+        <span>קהילה חיה</span>
+      </div>
+      <button class="btn" onclick="window.location.href='home.html'" id="startBtn">מתחילים</button>
     </div>
     <footer>תנאי שימוש | מדיניות פרטיות</footer>
   </div>
+
+  <script>
+    const hebrewTaglines = [
+      "הגבול בין שיגעון לגאונות — מתחיל כאן",
+      "המסחר כבר לא אותו דבר",
+      "TRADING BUY+ – החזון החדש של השוק"
+    ];
+    const englishTaglines = [
+      "The line between madness and genius — begins here",
+      "Trading will never be the same again",
+      "TRADING BUY+ – The future of smart markets"
+    ];
+    let taglineIndex = 0;
+    let lang = 'he';
+
+    function rotateTagline() {
+      const tagline = document.getElementById('tagline');
+      const lines = lang === 'en' ? englishTaglines : hebrewTaglines;
+      tagline.style.opacity = 0;
+      setTimeout(() => {
+        tagline.textContent = lines[taglineIndex];
+        tagline.style.opacity = 1;
+        taglineIndex = (taglineIndex + 1) % lines.length;
+      }, 500);
+    }
+
+    setInterval(rotateTagline, 4000);
+
+    function setLanguage(l) {
+      lang = l;
+      document.documentElement.lang = l;
+      location.reload();
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('hero').style.display = 'flex';
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
