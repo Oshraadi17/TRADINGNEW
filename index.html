@@ -22,7 +22,7 @@
     html, body {
       height: 100%;
       font-family: var(--font-hebrew);
-      background-color: #000;
+      background-color: #0d0d0d;
     }
 
     [lang='en'] body {
@@ -55,7 +55,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.65);
+      background: linear-gradient(to bottom right, rgba(20,20,40,0.6), rgba(0,0,0,0.75));
     }
 
     .content {
@@ -69,35 +69,34 @@
       font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      letter-spacing: 2px;
-      color: #FFD700;
+      color: #00BFFF;
       font-family: 'Orbitron', sans-serif;
-      text-shadow: 0 0 15px #f7931a;
+      text-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
     }
 
     p {
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      color: #e0e0e0;
+      color: #C0C0C0;
       text-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
 
     .btn {
-      background: linear-gradient(90deg, #f7931a, #ffcc00);
-      color: black;
+      background: linear-gradient(90deg, #4A90E2, #6A5ACD);
+      color: white;
       border: none;
       padding: 16px 48px;
-      border-radius: 50px;
-      font-size: 1.3rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       font-family: 'Orbitron', sans-serif;
-      box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
+      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
     }
 
     .btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 30px rgba(255, 204, 0, 0.9);
+      transform: scale(1.06);
+      box-shadow: 0 6px 25px rgba(106, 90, 205, 0.6);
     }
 
     footer {
@@ -105,7 +104,7 @@
       bottom: 20px;
       width: 100%;
       text-align: center;
-      color: #cccccc;
+      color: #A9A9A9;
       font-size: 0.9rem;
       z-index: 1;
     }
