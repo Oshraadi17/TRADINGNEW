@@ -3,159 +3,62 @@
 <html lang="he">
 <head>
   <meta charset="UTF-8">
-  <title>Trading Buy+</title>
+  <title>Trading Buy+ | דף הבית</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
+      text-align: center;
     }
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
       background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(5px);
+      padding: 10px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      z-index: 1000;
+      justify-content: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
     }
     nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-    }
-    nav .logo {
       color: gold;
+      text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;
-    }
-    .spacer {
-      height: 60px;
     }
     section {
-      padding: 60px 20px;
-      text-align: center;
-      backdrop-filter: blur(2px);
+      padding: 100px 20px;
     }
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       color: gold;
     }
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: gold;
+    p {
+      font-size: 1.2em;
     }
     .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
       background-color: gold;
       color: black;
-      padding: 12px 24px;
       border: none;
+      border-radius: 6px;
       font-weight: bold;
-      border-radius: 8px;
       cursor: pointer;
-      margin-top: 20px;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .card {
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 20px;
-      border-radius: 10px;
-      backdrop-filter: blur(2px);
-    }
-    .footer {
-      font-size: 0.9em;
-    }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav a {
-        margin: 5px 0;
-      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Trading Buy+</div>
-    <div>
-      <a href="#home">בית</a>
-      <a href="#about">עלינו</a>
-      <a href="#features">פיצ'רים</a>
-      <a href="#ai">AI</a>
-      <a href="#graph">גרף</a>
-      <a href="#pro">PRO</a>
-      <a href="#news">חדשות</a>
-      <a href="#footer">צור קשר</a>
-    </div>
+    <a href="index.html">בית</a>
+    <a href="chart.html">גרף</a>
   </nav>
-  <div class="spacer"></div>
-
-  <section id="home">
+  <section>
     <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
-    <p>The line between madness and genius begins here</p>
-    <button class="btn">מתחילים</button>
-  </section>
-
-  <section id="about">
-    <h2>מה זה Trading Buy+</h2>
-    <p>פלטפורמת מסחר חדשנית עם ניתוחים חכמים, גרף בזמן אמת, בוט רגשי, קהילה פעילה וכלים עוצמתיים – הכול במקום אחד.</p>
-  </section>
-
-  <section id="features">
-    <h2>מה תמצאו אצלנו</h2>
-    <div class="features-grid">
-      <div class="card">גרף חי חכם</div>
-      <div class="card">MindTrade™ AI</div>
-      <div class="card">יומן רגשי למסחר</div>
-      <div class="card">תמיכה בעברית ואנגלית</div>
-      <div class="card">קהילה פעילה</div>
-      <div class="card">חיבור לברוקרים</div>
-      <div class="card">גרסת PRO</div>
-      <div class="card">התראות בזמן אמת</div>
-    </div>
-  </section>
-
-  <section id="ai">
-    <h2>הצוות החכם שלנו</h2>
-    <p>מנטור אישי למסחר | בוט רגשי | עוזר בזמן אמת | תמיכה אוטומטית</p>
-  </section>
-
-  <section id="graph">
-    <h2>תצוגת גרף חיה</h2>
-    <p>גרף דמו עם SMT, Order Blocks, Liquidity Zones ועוד</p>
-  </section>
-
-  <section id="pro">
-    <h2>גרסת PRO</h2>
-    <p>הגרסה המקצועית עם כל הפיצ'רים המתקדמים וכלי הפרימיום</p>
-    <button class="btn">נצל 14 ימי ניסיון</button>
-  </section>
-
-  <section id="news">
-    <h2>חדשות כלכליות בזמן אמת</h2>
-    <p>קטגוריות: פד | מניות | מדדים | קריפטו | מט"ח</p>
-  </section>
-
-  <section id="footer" class="footer">
-    <p>© 2025 Trading Buy+. כל הזכויות שמורות.</p>
-    <p><a href="#" style="color:gold">מדיניות פרטיות</a> | <a href="#" style="color:gold">תנאי שימוש</a></p>
+    <p>Trading Buy+ - פלטפורמת מסחר חכמה</p>
+    <button class="btn" onclick="location.href='chart.html'">מעבר לגרף</button>
   </section>
 </body>
 </html>
