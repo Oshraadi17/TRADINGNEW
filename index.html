@@ -52,116 +52,105 @@
     .footer {
       font-size: 0.9em;
     }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(5px);
+      padding: 10px 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    .spacer {
+      height: 60px;
+    }
   </style>
 </head>
 <body>
-
-<div id="content-he">
-  <section>
-    <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
-    <p>The line between madness and genius begins here</p>
-    <button class="btn">מתחילים</button>
-  </section>
-
-  <section>
-    <h2>מה תמצאו ב-Trading Buy+</h2>
-    <div class="features-grid">
-      <div class="card">גרף חי חכם</div>
-      <div class="card">MindTrade™ AI</div>
-      <div class="card">יומן רגשי במסחר</div>
-      <div class="card">חיבור לברוקרים</div>
-      <div class="card">קהילה פעילה</div>
-      <div class="card">נכסים מועדפים</div>
-      <div class="card">רמות ICT אוטומטיות</div>
-      <div class="card">תמיכה בעברית ואנגלית</div>
+  <nav>
+    <div style="color:gold;font-size:1.2em;font-weight:bold;">Trading Buy+</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#ai">AI</a>
+      <a href="#graph">Graph</a>
+      <a href="#pro">Pro</a>
+      <a href="#news">News</a>
+      <a href="#footer">Contact</a>
     </div>
-  </section>
+  </nav>
+  <div class="spacer"></div>
 
-  <section>
-    <h2>הצוות החכם של AI</h2>
-    <p>מנטור מסחר | בוט רגשי | עוזר אישי בזמן אמת | תמיכה אוטומטית</p>
-  </section>
+  <div id="content-he">
+    <section id="home">
+      <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
+      <p>The line between madness and genius begins here</p>
+      <button class="btn">מתחילים</button>
+    </section>
 
-  <section>
-    <h2>תצוגת גרף חיה</h2>
-    <p>גרף דמו עם SMT, Order Blocks, Liquidity Zones ועוד – הכל בלייב</p>
-  </section>
+    <section id="features">
+      <h2>מה תמצאו ב-Trading Buy+</h2>
+      <div class="features-grid">
+        <div class="card">גרף חי חכם</div>
+        <div class="card">MindTrade™ AI</div>
+        <div class="card">יומן רגשי במסחר</div>
+        <div class="card">חיבור לברוקרים</div>
+        <div class="card">קהילה פעילה</div>
+        <div class="card">נכסים מועדפים</div>
+        <div class="card">רמות ICT אוטומטיות</div>
+        <div class="card">תמיכה בעברית ואנגלית</div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Trading Buy Pro</h2>
-    <p>הגרסה המקצועית עם כל הפיצ'רים החזקים והכלים המתקדמים</p>
-    <button class="btn">נצל 14 ימי ניסיון</button>
-  </section>
+    <section id="ai">
+      <h2>הצוות החכם של AI</h2>
+      <p>מנטור מסחר | בוט רגשי | עוזר אישי בזמן אמת | תמיכה אוטומטית</p>
+    </section>
 
-  <section>
-    <h2>חדשות כלכליות יומיות</h2>
-    <p>עדכונים בזמן אמת מהשוק – לפי קטגוריות: פד, מניות, קריפטו ועוד</p>
-  </section>
+    <section id="graph">
+      <h2>תצוגת גרף חיה</h2>
+      <p>גרף דמו עם SMT, Order Blocks, Liquidity Zones ועוד – הכל בלייב</p>
+    </section>
 
-  <section class="footer">
-    <p>© 2025 Trading Buy+. כל הזכויות שמורות.</p>
-    <p><a href="#" style="color:gold">מדיניות פרטיות</a> | <a href="#" style="color:gold">תנאי שימוש</a></p>
-  </section>
-</div>
+    <section id="pro">
+      <h2>Trading Buy Pro</h2>
+      <p>הגרסה המקצועית עם כל הפיצ'רים החזקים והכלים המתקדמים</p>
+      <button class="btn">נצל 14 ימי ניסיון</button>
+    </section>
 
-<div id="content-en" style="display:none;">
-  <section>
-    <h1>The line between madness and genius begins here</h1>
-    <p>הגבול בין שיגעון לגאונות — מתחיל כאן</p>
-    <button class="btn">Get Started</button>
-  </section>
+    <section id="news">
+      <h2>חדשות כלכליות יומיות</h2>
+      <p>עדכונים בזמן אמת מהשוק – לפי קטגוריות: פד, מניות, קריפטו ועוד</p>
+    </section>
 
-  <section>
-    <h2>What You'll Find in Trading Buy+</h2>
-    <div class="features-grid">
-      <div class="card">Smart Live Chart</div>
-      <div class="card">MindTrade™ AI</div>
-      <div class="card">Emotional Trading Journal</div>
-      <div class="card">Broker Integrations</div>
-      <div class="card">Active Community</div>
-      <div class="card">Favorite Assets</div>
-      <div class="card">Auto ICT Levels</div>
-      <div class="card">Hebrew & English Support</div>
-    </div>
-  </section>
+    <section id="footer" class="footer">
+      <p>© 2025 Trading Buy+. כל הזכויות שמורות.</p>
+      <p><a href="#" style="color:gold">מדיניות פרטיות</a> | <a href="#" style="color:gold">תנאי שימוש</a></p>
+    </section>
+  </div>
 
-  <section>
-    <h2>Our Smart AI Team</h2>
-    <p>Trading Mentor | Emotional Bot | Live Assistant | Auto Support</p>
-  </section>
+  <div id="content-en" style="display:none;">
+    <!-- English content here if needed -->
+  </div>
 
-  <section>
-    <h2>Live Graph View</h2>
-    <p>Demo chart with SMT, Order Blocks, Liquidity Zones and more – live</p>
-  </section>
-
-  <section>
-    <h2>Trading Buy Pro</h2>
-    <p>The professional version with all powerful features and advanced tools</p>
-    <button class="btn">Try 14 Days Free</button>
-  </section>
-
-  <section>
-    <h2>Daily Financial News</h2>
-    <p>Real-time updates from the market – by category: Fed, Stocks, Crypto & more</p>
-  </section>
-
-  <section class="footer">
-    <p>© 2025 Trading Buy+. All rights reserved.</p>
-    <p><a href="#" style="color:gold">Privacy Policy</a> | <a href="#" style="color:gold">Terms of Use</a></p>
-  </section>
-</div>
-
-<script>
-  const lang = navigator.language || navigator.userLanguage;
-  if (lang.startsWith('en')) {
-    document.getElementById('content-he').style.display = 'none';
-    document.getElementById('content-en').style.display = 'block';
-  } else {
-    document.getElementById('content-he').style.display = 'block';
-    document.getElementById('content-en').style.display = 'none';
-  }
-</script>
-
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('en')) {
+      document.getElementById('content-he').style.display = 'none';
+      document.getElementById('content-en').style.display = 'block';
+    } else {
+      document.getElementById('content-he').style.display = 'block';
+      document.getElementById('content-en').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
