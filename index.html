@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trading Buy+</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Buy+</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 50px;
+      background: rgba(0,0,0,0.6);
+    }
+    header h1 {
+      font-size: 3em;
+      color: gold;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+    .btn-start {
+      background-color: gold;
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      margin-top: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn-start:hover {
+      background-color: #ffd700;
+    }
+    .features, .ai-team, .live-graph, .pro-section, .news, .footer {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .features h2, .ai-team h2, .live-graph h2, .pro-section h2, .news h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: gold;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .pro-section {
+      background: linear-gradient(135deg, #111, #333);
+    }
+    .pro-section button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: gold;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .footer {
+      background: #000;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>הגבול בין שיגעון לגאונות — מתחיל כאן</h1>
+    <p>The line between madness and genius begins here</p>
+    <button class="btn-start">מתחילים</button>
+  </header>
+
+  <section class="features">
+    <h2>מה תמצאו ב-Trading Buy+</h2>
+    <div class="features-grid">
+      <div class="card">גרף חי חכם</div>
+      <div class="card">MindTrade™ AI</div>
+      <div class="card">יומן רגשי במסחר</div>
+      <div class="card">חיבור לברוקרים</div>
+      <div class="card">קהילה פעילה</div>
+      <div class="card">נכסים מועדפים</div>
+      <div class="card">רמות ICT אוטומטיות</div>
+      <div class="card">תמיכה בעברית ואנגלית</div>
+    </div>
+  </section>
+
+  <section class="ai-team">
+    <h2>הצוות החכם של AI</h2>
+    <p>מנטור מסחר | בוט רגשי | עוזר אישי בזמן אמת | תמיכה אוטומטית</p>
+  </section>
+
+  <section class="live-graph">
+    <h2>תצוגת גרף חיה</h2>
+    <p>גרף דמו עם SMT, Order Blocks, Liquidity Zones ועוד – הכל בלייב</p>
+  </section>
+
+  <section class="pro-section">
+    <h2>Trading Buy Pro</h2>
+    <p>הגרסה המקצועית עם כל הפיצ'רים החזקים והכלים המתקדמים</p>
+    <button>נצל 14 ימי ניסיון</button>
+  </section>
+
+  <section class="news">
+    <h2>חדשות כלכליות יומיות</h2>
+    <p>עדכונים בזמן אמת מהשוק – לפי קטגוריות: פד, מניות, קריפטו ועוד</p>
+  </section>
+
+  <section class="footer">
+    <p>© 2025 Trading Buy+. כל הזכויות שמורות.</p>
+    <p><a href="#" style="color:gold">מדיניות פרטיות</a> | <a href="#" style="color:gold">תנאי שימוש</a></p>
+  </section>
+</body>
 </html>
