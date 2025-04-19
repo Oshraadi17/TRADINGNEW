@@ -1,1 +1,32 @@
-<!DOCTYPE html><html><head><title>Adi Boost</title></head><body><h1>Adi Boost</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adi Boost</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adi Boost 🚀</h1>
+        <form id="boostForm">
+            <label for="service">בחר שירות:</label>
+            <select id="service">
+                <option value="likes">לייקים</option>
+                <option value="views">צפיות</option>
+                <option value="followers">עוקבים</option>
+                <option value="comments">תגובות</option>
+            </select><br><br>
+            
+            <label for="link">קישור לסרטון:</label>
+            <input type="text" id="link" placeholder="הדבק כאן את הקישור לסרטון"><br><br>
+
+            <label for="quantity">כמות:</label>
+            <input type="number" id="quantity" placeholder="כמות"><br><br>
+
+            <button type="submit">הזמן עכשיו</button>
+        </form>
+        <p id="response"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
