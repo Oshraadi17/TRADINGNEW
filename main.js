@@ -5,11 +5,18 @@ document.getElementById("boostForm").addEventListener("submit", function(e) {
     const link = document.getElementById("link").value;
     const quantity = document.getElementById("quantity").value;
 
-    if (!link || !quantity) {
-        document.getElementById("response").innerText = "אנא מלא את כל השדות.";
-        return;
-    }
-
-    // Simulate API call
-    document.getElementById("response").innerText = `הזמנת ${quantity} ${service} נשלחה בהצלחה! מתחילים מיד...`;
+    fetch("/api/order", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ service, link, quantity }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("response").innerText = data.message;
+    })
+    .catch(err => {
+        document.getElementById("response").innerText = "שגיאה בשליחה לשרת.";
+    });
 });
